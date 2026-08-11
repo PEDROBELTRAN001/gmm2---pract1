@@ -1,0 +1,13 @@
+// modificar y aumentar
+@if (juego){
+  <div class="detalle">
+    <a routerLink="/">volver Catalogo</a>
+    <h1>{{juego.nombre}} {{juego.apellidos}}</h1>
+    <img [src]="juego.imagen" [alt]="juego.nombre"/>
+    <p>Genero: {{juego.genero}}</p>
+    <p>Equipo: {{juego.equipo}}</p>
+    <p>Posicion: {{juego.posicion}}</p>
+    <p>Fecha de Nacimiento: {{juego.f_nacimiento}}</p>
+    <p>Edad: {{juego.edad}} años</p>
+  </div>
+}

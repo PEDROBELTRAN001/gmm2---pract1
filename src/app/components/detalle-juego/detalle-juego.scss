@@ -1,0 +1,91 @@
+/* Contenedor general estilo vestuario / ficha técnica */
+.detalle {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border: 3px solid #f59e0b; /* Borde dorado tipo trofeo */
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6),
+              0 0 20px rgba(245, 158, 11, 0.2);
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto de fondo de cancha sutil en el detalle */
+.detalle::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: radial-gradient(circle at top right, rgba(16, 185, 129, 0.15), transparent 60%);
+  pointer-events: none;
+}
+
+/* Botón de volver tipo entrada de estadio */
+.detalle a {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  background: #10b981;
+  color: #000000;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.detalle a:hover {
+  background: #34d399;
+  transform: translateX(-5px);
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.5);
+}
+
+/* Nombre del jugador en mayúsculas estilo tipografía de camiseta */
+.detalle h1 {
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0 0 1.5rem 0;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  border-bottom: 2px solid rgba(245, 158, 11, 0.5);
+  padding-bottom: 0.5rem;
+}
+
+/* Imagen estilo retrato oficial de cromo */
+.detalle img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 12px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1.5rem;
+}
+
+/* Filas de atributos tácticos/estadísticas */
+.detalle p {
+  background: rgba(255, 255, 255, 0.05);
+  margin: 0.6rem 0;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  border-left: 4px solid #f59e0b;
+  font-size: 1.05rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  backdrop-filter: blur(5px);
+}
+
+.detalle p:nth-child(even) {
+  border-left-color: #10b981; /* Alterna verde y dorado en los bordes */
+}
